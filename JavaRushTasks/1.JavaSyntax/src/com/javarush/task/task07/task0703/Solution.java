@@ -1,25 +1,25 @@
-package com.javarush.task.task07.task0702;
+package com.javarush.task.task07.task0703;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /* 
-Массив из строчек в обратном порядке
+Общение одиноких массивов
 */
 
 public class Solution {
     public static void main(String[] args) throws Exception {
 
         String [] masString = new String [10];
+        int [] masInt = new int [10];
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for(int i = 0; i < masString.length-2; i++){
+        for(int i = 0; i < masString.length; i++){
             masString[i] = reader.readLine();
-
+            masInt[i] = masString[i].length();
         }
-        for (int j = masString.length-1; j >= 0; j--) {
-
-            System.out.println(masString[j]);
+        for(int j = 0; j < masInt.length; j++){
+            System.out.println(masInt[j]);
         }
-
     }
 }
