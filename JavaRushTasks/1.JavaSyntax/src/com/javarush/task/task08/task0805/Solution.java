@@ -1,6 +1,7 @@
 package com.javarush.task.task08.task0805;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /* 
@@ -25,6 +26,12 @@ public class Solution {
     }
 
     public static void printValues(Map<String, String> map) {
-        //напишите тут ваш код
+
+        Iterator <Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        while(iterator.hasNext()){
+            Map.Entry<String, String> iter = iterator.next();
+            String value = iter.getValue();
+            System.out.println(value);
+        }
     }
 }
