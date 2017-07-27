@@ -15,7 +15,7 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         int count = 1;
-        int max = 0;
+        int max = 1;
 
         for (int i = 0; i < 10; i++){
             list.add(Integer.valueOf(reader.readLine()));
@@ -24,9 +24,13 @@ public class Solution {
         for (int i = 0; i < list.size()-1; i++){
             if (list.get(i) == list.get(i+1)) {
                 count++;
+                if (count > max){
+                    max = count;
+                }
+            }else{
+                count = 1;
             }
-
         }
-        System.out.println(count);
+        System.out.println(max);
     }
 }
