@@ -15,15 +15,25 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String text = reader.readLine();
         String text1 = "";
+        String text2 = "";
 
-        char [] masChar = text.toCharArray();
+            char [] masChar = text.toCharArray();
+
+
 
         for (int i = 0; i < masChar.length; i++){
-            if(isVowel(masChar[i])) {
-                System.out.print(masChar[i] + " ");
 
+            if(masChar[i] == ' '){
+                continue;
+            }else if(isVowel(masChar[i])) {
+                text1 += masChar[i] + " ";
+
+            }else{
+                text2 += masChar[i] + " ";
             }
         }
+        System.out.println(text1);
+        System.out.println(text2);
 
     }
 
