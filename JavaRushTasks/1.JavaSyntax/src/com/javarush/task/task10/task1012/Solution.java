@@ -16,7 +16,7 @@ public class Solution {
         String abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
         char[] abcArray = abc.toCharArray();
 
-        ArrayList<Character> alphabet = new ArrayList<Character>();
+        ArrayList<Character> alphabet =  new ArrayList<Character>();
         for (int i = 0; i < abcArray.length; i++) {
             alphabet.add(abcArray[i]);
         }
@@ -29,7 +29,20 @@ public class Solution {
         }
 
 
-        // напишите тут ваш код
-    }
+        String s ="";
+        for (int i=0;i<list.size();i++) {
+            s += list.get(i).toString();
+        }
 
+        for (Character c1 : alphabet){
+            int count = 0;
+            for (Character c2 : s.toCharArray()){
+                if (c2.equals(c1)) {
+                    count++;
+                }
+            }
+            System.out.println(c1 + " " + count);
+        }
+
+    }
 }
